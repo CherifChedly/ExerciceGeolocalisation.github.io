@@ -1,0 +1,27 @@
+<!doctype html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+
+  <script>
+    $(document).ready(function () {
+      if (typeof sessionStorage != 'undefined') {
+        if ('username' in sessionStorage) {
+          var x = sessionStorage.getItem('username');
+          alert("Nous vous contacterons dans les plus brefs délais Mme/Mr " + x);
+        }
+        else {
+          alert("First name non défini.");
+        }
+      } else {
+        alert("Désolé, le sessionStorage n'est pas supporté.");
+      }
+    });
+  </script>
+
+  <h2></h2>
+</body>
+
+</html>
