@@ -10,12 +10,13 @@
       if (typeof sessionStorage != 'undefined') {
         if ('username' in sessionStorage) {
           var x = sessionStorage.getItem('username');
-          alert("Nous vous contacterons dans les plus brefs délais Mme/Mr " + x);
+          $('h2').html("Nous vous contacterons dans les plus brefs délais Mme/Mr " + x);
         }
         else {
-          alert("First name non défini.");
+          $('h2').html("First name non défini.");
         }
       } else {
+        $('h2').html("Désolé, le sessionStorage n'est pas supporté.");
         alert("Désolé, le sessionStorage n'est pas supporté.");
       }
     });
